@@ -14,23 +14,30 @@
     <!-- vue -->
     <script src="https://unpkg.com/vue@3"></script>
 
-    <link rel="stylesheet" href="./css/style.css">
     <title>PHP ToDo List JSON</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="app">
-        <button type="button" @click="getData">load</button>
-
+        <!-- <button type="button" @click="getData">load</button> -->
+        
          <!-- todo list  -->
-         <h1 id="todo-list">To Do list</h1> 
-            <ul>
-                <li v-for="(item,i) in aData" :key="i">
-                    {{aData[i].text}}
-                </li>
-            </ul>
-        <input type="text" name="text" v-model="toDo.text" placeholder="Text to do">
-        <button @click="saveData">Salva</button>
+         <div class="contain">
+                <h1 id="todo-list">To Do list:</h1> 
+                <br>
+                <ul>
+                    <li v-for="(todo,i) in aData"  class="todo" :class="todo.done ? 'cleared' : ''">
+                        {{aData[i].text}} <a href=""><i class="fa-solid fa-trash"></i></a>
+                    </li>
+                </ul>
+                <br>
+                <div>        
+                    <input type="text" name="text" v-model="toDo.text" placeholder="Text to do">
+                    <button @click="saveData">Salva</button>
+                </div>
+        </div>
     </div>
+
     <script src="./js/script.js"></script>
 </body>
 </html>

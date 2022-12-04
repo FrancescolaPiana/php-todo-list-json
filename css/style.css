@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--color2);
 }
 
 :root {
@@ -10,4 +11,49 @@
     --color3: #000022;
     --color4: #DE3C4B;
     --color5: #C42847;
-  }
+}
+
+.cleared{
+    text-decoration: line-through;
+    color: var(--color4);
+}
+
+.contain{
+    border: 5px solid var(--color1);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+#app{
+    background-color: var(--color3);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; 
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+input{
+    background-color: var(--color3);
+    border: 2px solid var(--color2);
+    padding: .3rem .6rem;
+}
+button{
+    background-color: 
+    var(--color2);
+    color: var(--color3);
+    padding: .3rem .6rem;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+}
+.fa-trash{
+    color: var(--color5);
+}

@@ -7,7 +7,7 @@ const app = createApp({
             aData:[],
             toDo: {
                 text:'',
-                done: false
+                done: ''
             }
         }
     },
@@ -26,6 +26,7 @@ const app = createApp({
             }).then((response)=>{
                 console.log(response.data);
             })
+            this.getData()
         },
     },
     mounted() {
